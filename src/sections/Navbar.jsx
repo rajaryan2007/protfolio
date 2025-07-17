@@ -43,14 +43,14 @@ const Navbar = () => {
           </button>
 
           {/* Desktop navigation */}
-          <nav className="sm:flex hidden ">
+          <nav className="sm:flex hidden font-bold text-neutral-400">
             <NavItems />
           </nav>
         </div>
 
         {/* Mobile nav dropdown */}
         {isOpen && (
-          <div className="absolute left-0 right-0 bg-black-200 backdrop-blur-sm transition-all duration-300 ease-in-out overflow-hidden z-20 mx-auto sm:hidden block">
+          <div className="absolute  font-bold text-neutral-400 left-0 right-0 bg-black-200 backdrop-blur-sm transition-all duration-300 ease-in-out overflow-hidden z-20 mx-auto sm:hidden block">
             <NavItems />
           </div>
         )}
