@@ -1,7 +1,16 @@
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { motion } from "framer-motion";
+import { FaGithub, FaLinkedin, FaInstagram, FaTelegram } from "react-icons/fa";
 
 const Contact = () => {
+const socials = [
+  { name: "GitHub", icon: <FaGithub />, href: "https://github.com/rajaryan2007" },
+  { name: "LinkedIn", icon: <FaLinkedin />, href: "https://www.linkedin.com/in/raj-aryan-110bb8344/" },
+  
+ 
+];
+
   const formRef = useRef();
   const [form, setForm] = useState({
     name: '',
@@ -41,7 +50,7 @@ const Contact = () => {
   };
 
   return (
-    <section className='my-20 sm:px-10 px-5'>
+    <section id="contact" className='my-20 sm:px-10 px-5'>
       <div className='relative min-h-screen flex items-center justify-center flex-col'>
         <img
           src='assets/contect1.png'
@@ -110,7 +119,33 @@ const Contact = () => {
           </button>
         </form>
       </div>
+          <motion
+      id="contact"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="bg-black-900 min-h-[10vh] py-10 flex flex-col items-center justify-center rounded-2xl"
+    >
+      <h2 className="text-white text-3xl font-bold mb-6">Connect with Me</h2>
+
+      <div className="flex gap-6">
+        {socials.map((item, index) => (
+          <motion.a
+            key={index}
+            href={item.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white text-3xl hover:text-yellow-300 transition-colors"
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            {item.icon}
+          </motion.a>
+        ))}
+      </div>
+    </motion>
     </section>
+
   );
 };
 

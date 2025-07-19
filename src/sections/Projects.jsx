@@ -37,7 +37,7 @@ const projects = [
   };
   const project = projects[currentIndex];
 return (
-        <section className=' my-20 sm:px-10 px-5 '>
+        <section id="work" className=' my-20 sm:px-10 px-5 '>
             <div className="px-4 py-10">
                 <p className="text-cyan-300 text-center font-bold text-4xl mb-10">MY WORKS</p>
 
