@@ -4,6 +4,7 @@ import Hero from './sections/Hero'
 import About from './sections/About'
 import Projects from './sections/Projects'
 import Contect from './sections/Contect.jsx'
+import Models from './sections/Models.jsx'
 
 const App = () => {
   return (
@@ -13,6 +14,8 @@ const App = () => {
       <About/>
       <Projects/>
       <Contect/>
+      <Models/>
+
       </main>
   )
 }

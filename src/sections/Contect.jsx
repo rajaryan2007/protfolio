@@ -1,32 +1,52 @@
 import { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 
-const Contect = () => {
+const Contact = () => {
   const formRef = useRef();
-
   const [form, setForm] = useState({
     name: '',
     email: '',
     message: ''
   });
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", form);
-    // Add email sending logic or API call here
+    setLoading(true);
+    try {
+      await emailjs.send(
+        'service_20b08b4',
+        'template_glhr0zn',
+        {
+          form_name: form.name,
+          to_name: 'Rajaryan',
+          form_email: form.email,
+          to_email: 'rajaryan1492007@gmail.com',
+          message: form.message
+        },
+        'VKatitZYN0M20RYZC'
+      );
+      setLoading(false);
+      alert('Your message has been sent');
+    } catch (error) {
+      setLoading(false);
+      console.log(error);
+      alert('Something went wrong');
+    }
   };
 
   return (
     <section className='my-20 sm:px-10 px-5'>
-      <div className='relative min-h-screen flex items-center justify-center flex-col '>
+      <div className='relative min-h-screen flex items-center justify-center flex-col'>
         <img
           src='assets/contect1.png'
           alt='contact'
-          className=' rounded-2xl absolute inset-0 min-h-screen w-full object-cover opacity-50 lg:h-200'
+          className='rounded-2xl absolute inset-0 min-h-screen w-full object-cover opacity-50 lg:h-200'
         />
         <div className='contact-container z-10 text-center'>
           <h3 className='sm:text-4xl text-3xl font-semibold text-white'>
@@ -77,17 +97,16 @@ const Contect = () => {
               required
               rows={5}
               className='w-full bg-gray-800 px-5 py-3 rounded-lg placeholder-gray-400 text-white shadow-md focus:outline-none resize-none'
-
               placeholder='Your message...'
             />
           </label>
 
           <button
             type='submit'
+            disabled={loading}
             className='bg-blue-600 hover:bg-blue-700 text-white text-lg py-3 rounded-lg font-semibold shadow-lg transition-all'
-            >
-          
-            Send Message
+          >
+            {loading ? 'Sending...' : 'Send Message'}
           </button>
         </form>
       </div>
@@ -95,5 +114,4 @@ const Contect = () => {
   );
 };
 
-export default Contect;
-
+export default Contact;

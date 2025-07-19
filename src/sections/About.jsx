@@ -8,15 +8,16 @@ const About = () => {
 
         {/* Card 1 */}
         <div className='w-full h-full border border-gray-700 bg-black-200 rounded-lg p-4 sm:p-7 flex flex-col gap-5'>
-          <img src="assets/grid1.png" alt="Grid 1" className='rounded-lg object-cover w-full' />
+          <img src="assets/grid1.png" alt="Grid 1" className='rounded-lg object-cover w-full ' />
           <p className='text-xl font-semibold text-white font-generalsans'>Hello</p>
-          <p className='text-[#afb0b6] text-base font-generalsans'>my name is rajaryan from class 12th </p>
+          <p className='text-[#afb0b6] text-base font-generalsans'>
+            my name is rajaryan from class 12th </p>
         </div>
 
         {/* Card 2 */}
         <div className='w-full h-full border border-gray-700 bg-black-200 rounded-lg p-4 sm:p-7 flex flex-col gap-5'>
-          <img src="assets/grid2.png" alt="Grid 2" className='rounded-lg object-cover w-full' />
-           <p className='text-xl font-semibold text-white font-generalsans'></p>
+          <img src="assets/skill.png" alt="skill" className='rounded-lg object-cover   w-full opacity-50' />
+           <p className='text-xl font-semibold text-white py-3 font-generalsans'>SKILL</p>
           <p className='text-[#afb0b6] text-base font-generalsans'> KNOW ABOUT REACT, THREE.JS and tailwindcss </p>
         </div>
 
