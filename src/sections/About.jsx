@@ -18,7 +18,7 @@ const About = () => {
         <div className='w-full h-full border border-gray-700 bg-black-200 rounded-lg p-4 sm:p-7 flex flex-col gap-5'>
           <img src="assets/skill.png" alt="skill" className='rounded-lg object-cover   w-full opacity-50' />
            <p className='text-xl font-semibold text-white py-3 font-generalsans'>SKILL</p>
-          <p className='text-[#afb0b6] text-base font-generalsans'> KNOW ABOUT REACT, THREE.JS and tailwindcss </p>
+          <p className='text-[#afb0b6] text-base font-generalsans'> HTML, CSS, JavaScript, React.js, Tailwind CSS, Three.js, Node.js, Express.js, MongoDB, Git & GitHub, C++, Python, OpenGL, GLSL, GLM, Linux (basic), Vercel, Responsive Design</p>
         </div>
 
         {/* Globe Card */}
