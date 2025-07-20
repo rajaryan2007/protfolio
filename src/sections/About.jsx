@@ -11,7 +11,7 @@ const About = () => {
           <img src="assets/grid1.png" alt="Grid 1" className='rounded-lg object-cover w-full ' />
           <p className='text-xl font-semibold text-white font-generalsans'>Hello</p>
           <p className='text-[#afb0b6] text-base font-generalsans'>
-            my name is rajaryan from class 12th </p>
+            I'm a full-stack developer currently in Class 12. I enjoy building modern, interactive web apps using React, Node.js, and Three.js. Passionate about technology, AI, and open-source </p>
         </div>
 
         {/* Card 2 */}
