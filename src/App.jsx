@@ -14,7 +14,7 @@ const App = () => {
       <About/>
       <Projects/>
       <Contect/>
-     //<Models/>
+     {/* <Models/> */}
       
       </main>
   )
