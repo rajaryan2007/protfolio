@@ -5,7 +5,7 @@ export default function ChatbotWidget() {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
 
-  // Portfolio data (replace with your real info)
+ 
   const portfolioData = {
     name: "Rajaryan",
     title: "Full Stack Developer, Vulkan and OpenGL dev",
@@ -36,7 +36,7 @@ export default function ChatbotWidget() {
     setMessages((prev) => [...prev, userMsg]);
 
     try {
-      // Build context with portfolio info
+      
       const context = `
 You are a friendly chatbot for Raj's portfolio website.
 Always answer as if you are helping a visitor learn about Raj.
