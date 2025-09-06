@@ -53,7 +53,7 @@ Conversation so far:
 ${messages.map((m) => `${m.role}: ${m.content}`).join("\n")}
 User: ${input}
       `;
-
+    // This project is for demo purposes so the aPI key is exposed in frontend code in a real world app i would secure this using backend routes or serverless functions and if i use env u can still see this from network in devtool
       const response = await fetch(
         "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=AIzaSyAt4xcC20nJYWFFpzSoYI3yyBkk5divMUg",
         {
@@ -68,7 +68,7 @@ User: ${input}
       const data = await response.json();
       const botMsg = {
         role: "bot",
-        content: data?.candidates?.[0]?.content?.parts?.[0]?.text || "🤖 No reply",
+        content: data?.candidates?.[0]?.content?.parts?.[0]?.text || " No reply",
       };
 
       setMessages((prev) => [...prev, botMsg]);
@@ -76,7 +76,7 @@ User: ${input}
       console.error("Gemini API error:", err);
       setMessages((prev) => [
         ...prev,
-        { role: "bot", content: "❌ Error: " + err.message },
+        { role: "bot", content: "error " + err.message },
       ]);
     }
 
@@ -87,13 +87,11 @@ User: ${input}
     <div className="fixed bottom-5 right-5">
       {isOpen ? (
         <div className="w-80 h-96 bg-white shadow-xl rounded-xl flex flex-col border">
-          {/* Header */}
+       
           <div className="p-2 bg-purple-600 text-white flex justify-between items-center rounded-t-xl">
-            <span>🤖 Portfolio Bot</span>
+            <span> Portfolio Bot</span>
             <button onClick={() => setIsOpen(false)}>✖</button>
           </div>
-
-          {/* Messages */}
           <div className="flex-1 overflow-y-auto p-2 space-y-2">
             {messages.map((msg, i) => (
               <div
@@ -108,8 +106,6 @@ User: ${input}
               </div>
             ))}
           </div>
-
-          {/* Input */}
           <div className="p-2 flex border-t">
             <input
               value={input}
