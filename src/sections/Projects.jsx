@@ -7,7 +7,7 @@ const projects = [
     title: "wallpaper site",
     description: "wallpaper site uplaod delete and dowload and other feature auth",
     image: "assets/Screenshot 2025-10-02 234542.png",
-    link: "https://protfolio-rouge-iota.vercel.app/",
+    link: "https://wallpaper-website-1nqz.vercel.app/all-image",
   },
   {
     title: "Todolist",
@@ -25,7 +25,7 @@ const projects = [
     title: "Portfolio Website",
     description: "Personal responsive website using React + Tailwind and three.js",
     image: "assets/protfolio.png",
-    link: "https://wallpaper-website-1nqz.vercel.app/all-image",
+    link: "https://protfolio-rouge-iota.vercel.app/",
   }
 
   
