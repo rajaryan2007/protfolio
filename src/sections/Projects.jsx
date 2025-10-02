@@ -2,6 +2,13 @@
 import {useState} from 'react';
 const Projects= () => {
 const projects = [
+
+     {
+    title: "wallpaper site",
+    description: "wallpaper site uplaod delete and dowload and other feature auth",
+    image: "assets/Screenshot 2025-10-02 234542.png",
+    link: "https://protfolio-rouge-iota.vercel.app/",
+  },
   {
     title: "Todolist",
     description: "Connected to MongoDB, Node.js, and Express.js",
@@ -19,7 +26,9 @@ const projects = [
     description: "Personal responsive website using React + Tailwind and three.js",
     image: "assets/protfolio.png",
     link: "https://protfolio-rouge-iota.vercel.app/",
-  },
+  }
+
+  
 ];
 
     
