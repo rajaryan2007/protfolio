@@ -25,7 +25,7 @@ const projects = [
     title: "Portfolio Website",
     description: "Personal responsive website using React + Tailwind and three.js",
     image: "assets/protfolio.png",
-    link: "https://protfolio-rouge-iota.vercel.app/",
+    link: "https://wallpaper-website-1nqz.vercel.app/all-image",
   }
 
   
