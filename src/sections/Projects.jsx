@@ -9,23 +9,11 @@ const projects = [
     image: "assets/Screenshot 2025-10-02 234542.png",
     link: "https://wallpaper-website-1nqz.vercel.app/all-image",
   },
-  {
-    title: "Todolist",
-    description: "Connected to MongoDB, Node.js, and Express.js",
-    image: "assets/todolist.png",
-    link: "https://todo-list-6h5m.vercel.app/",
-  },
-  {
-    title: "Spotify Clone",
-    description: "Built using html+CSS+Javascript",
-    image: "assets/spotify.png",
-    link: "https://spotify-clone-cyan-gamma.vercel.app/",
-  },
-  {
-    title: "Portfolio Website",
-    description: "Personal responsive website using React + Tailwind and three.js",
-    image: "assets/protfolio.png",
-    link: "https://protfolio-rouge-iota.vercel.app/",
+   {
+    title: "asset manager site",
+    description: "asset manager  site uplaod delete dowload sell pruchase with paypal and other feature with google auth",
+    image: "assets/Screenshot 2025-11-27 025727.png",
+    link: "https://assest-manager.vercel.app/",
   }
 
   
