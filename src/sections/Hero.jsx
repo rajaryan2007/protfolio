@@ -17,7 +17,7 @@ const Hero = () => {
   //   const {
   //     rotationX,
   //     rotationY,
-  //     rotationZ,
+  //     rotationZ,//
   //     positionX,
   //     positionY,
   //     positionZ,
