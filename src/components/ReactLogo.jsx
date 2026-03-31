@@ -6,12 +6,12 @@ const ReactLogo = (props) => {
   const group = useRef()
   const { nodes, materials } = useGLTF('/models/react_logo.glb')
 
-  // Animation: floating + slow Y-axis rotation
+
   useFrame((state) => {
     const t = state.clock.getElapsedTime()
     if (group.current) {
-      group.current.position.y = Math.sin(t * 1) * 0.212 // smooth up-down
-     
+      group.current.position.y = Math.sin(t * 1) * 0.212
+
     }
   })
 

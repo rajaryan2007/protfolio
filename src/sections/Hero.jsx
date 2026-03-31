@@ -1,78 +1,69 @@
-import React, { Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
-// import { Leva, useControls } from "leva";
-import HackerRoom from "../components/HackerRoom";
-import CanvasLoader from "../components/CanvasLoader";
-import { useMediaQuery } from 'react-responsive';
-import { calculateSizes } from "../constants/index.js";
-import HeroCamera from "../components/HeroCamera.jsx";
-
-import ReactLogo from "../components/ReactLogo.jsx"
-import Target from "../components/Target.jsx";
-
-
-
+import React from 'react';
+import SplitText from '../components/SplitText';
+import TextType from '../components/TextType';
 
 const Hero = () => {
-  //   const {
-  //     rotationX,
-  //     rotationY,
-  //     rotationZ,//
-  //     positionX,
-  //     positionY,
-  //     positionZ,
-  //     scale,
-  //   } = useControls("HackerRoom", {
-  //     rotationX: { value: 0, min: -10, max: 10 },
-  //     rotationY: { value: 0, min: -10, max: 10 },
-  //     rotationZ: { value: 0, min: -10, max: 10 },
-  //     positionX: { value: 2.5, min: -10, max: 10 },
-  //     positionY: { value: 2.5, min: -10, max: 10 },
-  //     positionZ: { value: 2.5, min: -10, max: 10 },
-  //     scale: { value: 1, min: 0.1, max: 10 },
-  //   });
-  const isSmall = useMediaQuery({ maxWidth: 480 });
-  const isMobile = useMediaQuery({
-    maxWidth: 768
-  });
-  const isTablet = useMediaQuery({
-    minWidth: 768, maxWidth: 1024
-  });
-//min-h-screen
-  const sizes = calculateSizes(isSmall, isMobile, isTablet);
-
   return (
-    <section id='home' className="h-200 w-full  flex flex-col relative">
-      <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 sm:px-10 px-5 gap-3">
-        <p className="sm:text-3xl text-2xl font-medium text-white text-center font-generalsans">
-          Hi, I am Raj Aryan <span className="waving-hand">👋</span>
+    <section className="min-h-[85vh] w-full flex flex-col relative bg-transparent overflow-hidden" id="home">
+
+      <div className="absolute inset-0 opacity-[0.02] pointer-events-none z-10"
+        style={{ backgroundImage: 'radial-gradient(#cba6f7 2px, transparent 2px)', backgroundSize: '60px 60px' }} />
+
+
+      <div className="flex-1 w-full mx-auto flex flex-col justify-center sm:px-10 px-6 gap-8 relative z-20 items-center text-center">
+        {/* <div className="px-8 py-3 bg-[#cba6f7] border-[3px] border-black text-black text-xs font-black uppercase tracking-[0.4em] mb-4 shadow-[6px_6px_0_0_#000]">
+          Engineering Excellence
+        </div> */}
+
+        <div className="sm:text-4xl text-3xl font-black text-[#cdd6f4] font-generalsans uppercase tracking-tight">
+          <TextType
+            text="Raj Aryan"
+            speed={120}
+            className="inline-block"
+            cursorChar="|"
+          />
+        </div>
+
+        <div className="flex flex-col items-center gap-1 sm:gap-2">
+          <SplitText
+            text="ARCHITECTING DIGITAL"
+            className="text-4xl sm:text-6xl md:text-8xl font-black text-white uppercase tracking-tighter"
+            threshold={0.1}
+          />
+          <SplitText
+            text="LOGIC & MOTION"
+            className="text-4xl sm:text-6xl md:text-8xl font-black text-[#cba6f7] uppercase tracking-tighter"
+            threshold={0.1}
+          />
+        </div>
+
+        <p className="max-w-2xl text-sm sm:text-lg font-black text-[#a6adc8] leading-relaxed font-generalsans uppercase tracking-tight">
+          Systems and immersive visual experiences through <span className="bg-[#a6e3a1] text-black px-1.5 py-0.5 sm:px-2 sm:py-0.5 border-[2px] border-black shadow-[2px_2px_0_0_#000] sm:shadow-[3px_3px_0_0_#000]">graphics</span> and <span className="bg-[#89b4fa] text-black px-1.5 py-0.5 sm:px-2 sm:py-0.5 border-[2px] border-black shadow-[2px_2px_0_0_#000] sm:shadow-[3px_3px_0_0_#000]">web engineering</span>.
         </p>
-        <p className="text-center xl:text-6xl md:text-5xl sm:text-4xl text-3xl font-generalsans font-black !leading-normal bg-gradient-to-r from-[#BEC1CF] from-60% via-[#D5D8EA] via-60% to-[#D5D8EA] to-100% bg-clip-text text-transparent">
-          building product & Brands
-        </p>
+
+        <div className="mt-10 sm:mt-14 flex flex-col sm:flex-row flex-wrap justify-center gap-4 sm:gap-8 w-full sm:w-auto">
+          <a
+            href="#work"
+            className="group px-8 py-4 sm:px-14 sm:py-5 bg-[#cba6f7] text-[#1e1e2e] font-black border-[3px] sm:border-[4px] border-black hover:bg-white hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[6px_6px_0_0_#000] sm:hover:shadow-[10px_10px_0_0_#000] active:translate-x-0 active:translate-y-0 active:shadow-none transition-all duration-200 flex justify-center items-center gap-3 uppercase text-xs sm:text-sm tracking-widest shadow-[4px_4px_0_0_#000] sm:shadow-[6px_6px_0_0_#000]"
+          >
+            Explore Projects
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" className="sm:w-[22px] sm:h-[22px]">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a
+            href="#contact"
+            className="group px-8 py-4 sm:px-14 sm:py-5 bg-[#181825] border-[3px] sm:border-[4px] border-black text-white font-black hover:bg-[#cba6f7] hover:text-black hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[6px_6px_0_0_#000] sm:hover:shadow-[10px_10px_0_0_#000] active:translate-x-0 active:translate-y-0 active:shadow-none transition-all duration-200 flex justify-center items-center gap-3 uppercase text-xs sm:text-sm tracking-widest shadow-[4px_4px_0_0_#000] sm:shadow-[6px_6px_0_0_#000]"
+          >
+            Let's Talk
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" className="sm:w-[20px] sm:h-[20px]">
+              <path d="m5 19 14-14M7 5h12v12" />
+            </svg>
+          </a>
+        </div>
       </div>
 
-      <div className="w-full h-full absolute inset-0">
-        {/* <Leva collapsed={false} /> */}
-        <Canvas className="w-full h-120" camera={{ position: [0, 0, 10], fov: 75 }}>
-          <Suspense fallback={<CanvasLoader />}>
-            <HeroCamera>
-              <HackerRoom
-                position={sizes.deskPosition}
-                rotation={[0, -Math.PI, 0]}
-                scale={calculateSizes.deskScale}
-              /></HeroCamera>
-            <group >
-              <ReactLogo position={sizes.ReactLogoPosition} />
-
-              <Target position={[-8, -4, 0]} />
-            </group>
-           
-            <ambientLight intensity={1} />
-            <directionalLight position={[10, 10, 10]} intensity={0.5} />
-          </Suspense>
-        </Canvas>
-      </div>
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#1e1e2e] to-transparent z-10 pointer-events-none" />
     </section>
   );
 };
