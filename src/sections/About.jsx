@@ -58,7 +58,7 @@ const About = () => {
 
                 <div className='space-y-4 sm:space-y-6'>
                   <div className='text-[#cdd6f4] text-lg sm:text-xl md:text-2xl leading-relaxed font-bold flex flex-col sm:flex-row sm:flex-wrap gap-2'>
-                    <span className="bg-[#cba6f7] text-black px-2 py-1 max-w-max">Full-Stack Architect.</span>
+                    <span className="bg-[#cba6f7] text-black px-2 py-1 max-w-max">Full Stack Developer.</span>
                     <span className="bg-[#74c7ec] text-black px-2 py-1 max-w-max">Low-Level Graphics Engineer.</span>
                   </div>
                   <p className='text-[#a6adc8] text-base sm:text-lg leading-relaxed font-medium'>
