@@ -7,7 +7,7 @@ const Contact = () => {
   const socials = [
     { name: "GitHub", icon: <FaGithub />, href: "https://github.com/rajaryan2007", color: "#cba6f7" },
     { name: "LinkedIn", icon: <FaLinkedin />, href: "https://www.linkedin.com/in/raj-aryan-110bb8344/", color: "#74c7ec" },
-    { name: "Twitter", icon: <FaTwitter />, href: "#", color: "#fab387" },
+    { name: "Twitter", icon: <FaTwitter />, href: "https://x.com/aryan35036", color: "#fab387" },
     { name: "Email", icon: <FaEnvelope />, href: "mailto:rajaryan1492007@gmail.com", color: "#a6e3a1" },
   ];
 
