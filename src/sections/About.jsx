@@ -62,7 +62,7 @@ const About = () => {
                     <span className="bg-[#74c7ec] text-black px-2 py-1 max-w-max">Low-Level Graphics Engineer.</span>
                   </div>
                   <p className='text-[#a6adc8] text-base sm:text-lg leading-relaxed font-medium'>
-                    Building a cross-platform 3D Game Engine (OpenGL + Vulkan + C++). Active in DSA and Python for AI. Honest engineering for complex problems.
+                    Building a cross-platform 3D Game Engine (OpenGL + Vulkan + C++). Active in Web and Graphcis . Honest engineering for complex problems.
                     <span className='inline-block mt-2 italic font-black text-[#a6e3a1] block'>I use Arch btw.</span>
                   </p>
                 </div>
